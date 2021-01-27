@@ -21,13 +21,13 @@ install:
 uninstall:
 	-pip uninstall -y $(PACKAGE)
 build: README.md $(wildcard $(BASE)/formats/*.py)
-	./setup.py sdist bdist_wheel
+	python ./setup.py sdist bdist_wheel
 
 
 deploy: build
 	twine upload dist/*
 check:
-	./setup.py check
+	python ./setup.py check
 clean:
 	-rm $(ALL) *~ */*~ *.rdf *.json
 	-rm -rf build dist *.egg-info

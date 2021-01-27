@@ -17,7 +17,7 @@ long_desc = "".join(open("README.md").readlines())
 
 
 setup(
-    name='genice2_dev',
+    name='genice2-dev',
     version=metadata['version'],
     description='Library to develop GenIce2 plugins.',
     long_description=long_desc,
